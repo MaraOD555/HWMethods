@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         exercise1(2022);
         exercise2(0, 2020);
-
+        System.out.println("Потребуется дней: " + daysForDelivery(80));
     }
         //Задание 1 Реализуйте метод, который
         // получает в качестве параметра год, а затем проверяет,
@@ -33,5 +33,21 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
+        //Задание 3 расчет дней доставки банковской карты от банка
+        //доработать код, а именно написать метод, который на вход принимает дистанцию
+        // и возвращает итоговое количество дней доставки.
+
+        public static int daysForDelivery (int distance) {
+            int days = 0;
+            if (distance < 20) {
+                days = 1;
+            } else if (distance >= 20 && distance < 60) {
+                days = 2;
+            } else if (distance >= 60 && distance < 100) {
+                days = 3;
+            }
+            return days;
+        }
+
 
 }
